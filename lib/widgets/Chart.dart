@@ -34,13 +34,12 @@ class Chart extends StatelessWidget {
     return Card(
       elevation: 6,
       margin: EdgeInsets.all(20),
-      child: Container(
+      child: Padding(
         padding: EdgeInsets.all(10),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: groupedTransactionValues.map((item) {
-            return Flexible(
-              fit: FlexFit.tight,
+            return Expanded(
               child: ChartBar(
                   item['day'] as String,
                   item['amount'] as double,
